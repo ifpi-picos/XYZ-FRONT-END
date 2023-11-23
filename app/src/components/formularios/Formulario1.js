@@ -3,21 +3,44 @@
 
 // components/Formulario.js
 import Image from 'next/image';
-import { useForm } from 'react-hook-form';
 import logo from "@/components/img/login.jpg"
+import * as yup from "yup"
+import {yupResolver} from "@hookform/resolvers/yup"
+import { Controller,useForm } from "react-hook-form";
 
+const schema = yup.object().shape({
+nome: yup.string().required("nome obrigatório"),
+descricao: yup.string().required("decrição obrigatória"),
+ingredientes: yup.string().required("ingredientes obrigatório"),
+modeDePreparo: yup.string().required("modo de preparo obrigatório")
+})
 const Formulario = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  
+const  {
+control,
+handleSubmit,
+formState:{errors},
 
-  const onSubmit = (data) => {
+}  = useForm(yupResolver(schema))
 
-    console.log(data);
-  };
-
+const onSubmit = async formdata  => {
+  try {
+    const response = await fetch("https://gym-academy-back-end-six.vercel.app/nova-receita",{
+      method:"Post",
+      headers:{
+        "Content-type":"application/json",
+      },
+      body:JSON.stringify(formdata)
+    })
+    if(response.ok){
+      const info = await response.json()
+      conaole.log(info)
+    }
+  }
+  catch(erro){
+    console.error(erro)
+  }
+}
   return (
     <div className="form-container">
       <Image
@@ -29,77 +52,82 @@ const Formulario = () => {
                  
                  layout="fixed" 
                  objectFit="cover"
-               className="imagemr" />
+               className="imagem" />
       <h2>Formulário de Receita</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
           <label htmlFor="imagemReceita">Imagem</label>
           <input
-            {...register('imagemReceita', {
-              required: 'Este campo é obrigatório',
-            })}
+            
             type="file"
             id="imagemReceita"
             accept="image/*"
           />
-          {errors.imagemReceita && (
-            <p className="error-message">{errors.imagemReceita.message}</p>
-          )}
+        
         </div>
 
         <div className="form-group">
           <label htmlFor="nomeReceita">Nome da Receita</label>
-          <input
-            {...register('nomeReceita', {
-              required: 'Este campo é obrigatório',
-            })}
-            type="text"
-            id="nomeReceita"
+          <Controller
+           control={control}
+           name="nome"
+           render={({field})=>(
+            <input 
+              type= "text"
+              name="nome"
+              value= {field.value}
+              onChange={field.onChange}
+            />
+  )}
           />
-          {errors.nomeReceita && (
-            <p className="error-message">{errors.nomeReceita.message}</p>
-          )}
         </div>
 
         <div className="form-group">
-          <label htmlFor="descricaoReceita">Descrição</label>
-          <textarea
-            {...register('descricaoReceita', {
-              required: 'Este campo é obrigatório',
-            })}
-            id="descricaoReceita"
+          <label htmlFor="descricao">Descrição</label>
+          <Controller
+           control={control}
+           name="descricao"
+           render={({field})=>(
+            <textarea
+            name="descricao"
+
+              value= {field.value}
+              onChange={field.onChange}
+            />
+           )}
           />
-          {errors.descricaoReceita && (
-            <p className="error-message">{errors.descricaoReceita.message}</p>
-          )}
         </div>
 
         <div className="form-group">
           <label htmlFor="ingredientes">Ingredientes</label>
-          <textarea
-            {...register('ingredientes', {
-              required: 'Este campo é obrigatório',
-            })}
-            id="ingredientes"
-          />
-          {errors.ingredientes && (
-            <p className="error-message">{errors.ingredientes.message}</p>
-          )}
-        </div>
+          <Controller
+           control={control}
+           name="ingredientes"
+           render={({field})=>(
+            <textarea
+            name="ingredientes"
 
+              value= {field.value}
+              onChange={field.onChange}
+            />
+           )}
+          />
+        </div>
         <div className="form-group">
-          <label htmlFor="modoPreparo">Modo de Preparo</label>
-          <textarea
-            {...register('modoPreparo', {
-              required: 'Este campo é obrigatório',
-            })}
-            id="modoPreparo"
-          />
-          {errors.modoPreparo && (
-            <p className="error-message">{errors.modoPreparo.message}</p>
-          )}
-        </div>
+          <label htmlFor="modeDePreparo">Mode De Preparo</label>
+          <Controller
+           control={control}
+           name="modeDePreparo"
+           render={({field})=>(
+            <textarea
+            name="modeDePreparo"
 
+              value= {field.value}
+              onChange={field.onChange}
+            />
+           )}
+          />
+        </div>
         <button type="submit">Enviar</button>
       </form>
 

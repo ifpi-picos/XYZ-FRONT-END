@@ -16,20 +16,20 @@ const SlideNavbar = () => {
 
         <div className="signup" style={formContainerStyle}>
           <form>
-            <label htmlFor="chk" aria-hidden="true">Sign up</label>
+            <label htmlFor="chk" aria-hidden="true">Cadastrar</label>
             <input type="text" name="txt" placeholder="Seu nome" required="" />
             <input type="email" name="email" placeholder="E-mail" required="" />
             <input type="password" name="pswd" placeholder="senha" required="" />
-            <button>Sign up</button>
+            <button>Cadastrar</button>
           </form>
         </div>
 
         <div className="login" style={formContainerStyle}>
           <form>
-            <label htmlFor="chk" aria-hidden="true">Login</label>
+            <label htmlFor="chk" aria-hidden="true">Entrar</label>
             <input type="email" name="email" placeholder="E-mail" required="" />
             <input type="password" name="pswd" placeholder="senha" required="" />
-            <button>Login</button>
+            <button>Entrar</button>
           </form>
         </div>
       </div>

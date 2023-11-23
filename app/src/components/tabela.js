@@ -81,7 +81,7 @@ const TrainingTable = () => {
             <Image
               className="tabelasobre"
               src={sobree}
-              width={400}
+              width={200}
               height={300}
               alt="sobre"
             />

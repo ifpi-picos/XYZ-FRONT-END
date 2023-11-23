@@ -7,7 +7,7 @@ const biotipo = () => {
       
       <Biotipo />
     </div>
-  );
+  ); 
 };
 
 export default biotipo;

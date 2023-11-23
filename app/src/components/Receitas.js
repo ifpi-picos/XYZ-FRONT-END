@@ -8,8 +8,10 @@ import Image from "next/image";
 import "@/components/menu2";
 import crepioca from "@/components/img/crepioca.jpeg"
 
-async function pegarRecitas() {
-  const res = await fetch("http://localhost:5000/", {
+
+ 
+async function pegarReceitas() {
+  const res = await fetch("https://gym-academy-back-end-six.vercel.app/receitas", {
     cache: "no-store",
   });
   
@@ -18,7 +20,7 @@ async function pegarRecitas() {
   return info;
 }
 export default async function Receitas() {
-  const receitas = await pegarRecitas();
+  const receitas = await pegarReceitas();
 
   return (
     <>

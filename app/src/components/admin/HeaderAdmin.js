@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap';
 
 const AdminNavbar = () => {
   return (
@@ -18,8 +20,8 @@ const AdminNavbar = () => {
           <Link href="/admin/users" passHref>
             <Nav.Link as="a">Usuários</Nav.Link>
           </Link>
-          <Link href="/admin/products" passHref>
-            <Nav.Link as="a">Produtos</Nav.Link>
+          <Link href="/formularioreceita" passHref>
+            <Nav.Link as="a">Cadastrar Receitas</Nav.Link>
           </Link>
         </Nav>
         <Nav>

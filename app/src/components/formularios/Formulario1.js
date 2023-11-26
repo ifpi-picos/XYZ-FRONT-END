@@ -2,6 +2,7 @@
 "use client"
 
 // components/Formulario.js
+
 import Image from 'next/image';
 import logo from "@/components/img/login.jpg"
 import * as yup from "yup"
@@ -43,7 +44,9 @@ const onSubmit = async formdata  => {
   }
 }
   return (
+  
     <div className="form-container">
+    
       <Image
                  
                  src={logo}
@@ -133,6 +136,22 @@ const onSubmit = async formdata  => {
       </form>
 
       <style jsx>{`
+      
+      .backButton {
+        display: inline-block;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .backButton:hover {
+        background-color: #0056b3;
+      }
+      
+      
         .form-container {
           max-width: 400px;
           margin: auto;

@@ -12,6 +12,7 @@ import crepioca from "@/components/img/crepioca.jpeg"
  
 async function pegarReceitas() {
   const res = await fetch("https://gym-academy-back-end-six.vercel.app/receitas", {
+    
     cache: "no-store",
   });
   
@@ -86,8 +87,7 @@ export default async function Receitas() {
             </section>
       
             
-              
-              
+        
       
         {receitas.map((info, index) => (
           <section className="container-fluid" id="informacoes" key={index}>

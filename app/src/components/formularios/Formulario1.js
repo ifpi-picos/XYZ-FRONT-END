@@ -12,7 +12,7 @@ const schema = yup.object().shape({
 nome: yup.string().required("nome obrigatório"),
 descricao: yup.string().required("decrição obrigatória"),
 ingredientes: yup.string().required("ingredientes obrigatório"),
-modeDePreparo: yup.string().required("modo de preparo obrigatório")
+modoDePreparo: yup.string().required("modo de preparo obrigatório")
 })
 const Formulario = () => {
   
@@ -28,13 +28,14 @@ const onSubmit = async formdata  => {
     const response = await fetch("https://gym-academy-back-end-six.vercel.app/nova-receita",{
       method:"Post",
       headers:{
-        "Content-type":"application/json",
+        "content-type": "application/json",
       },
       body:JSON.stringify(formdata)
     })
     if(response.ok){
       const info = await response.json()
-      conaole.log(info)
+      window.location 
+      console.log(info)
     }
   }
   catch(erro){
@@ -114,13 +115,13 @@ const onSubmit = async formdata  => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="modeDePreparo">Mode De Preparo</label>
+          <label htmlFor="modoDePreparo">Mode De Preparo</label>
           <Controller
            control={control}
-           name="modeDePreparo"
+           name="modoDePreparo"
            render={({field})=>(
             <textarea
-            name="modeDePreparo"
+            name="modoDePreparo"
 
               value= {field.value}
               onChange={field.onChange}

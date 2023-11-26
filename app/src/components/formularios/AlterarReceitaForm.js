@@ -14,7 +14,7 @@ descricao: yup.string().required("decrição obrigatória"),
 ingredientes: yup.string().required("ingredientes obrigatório"),
 modoDePreparo: yup.string().required("modo de preparo obrigatório")
 })
-const AlterarReceitaForm = () => {
+const AlterarReceitaForm = ({id}) => {
   
 const  {
 control,
@@ -22,10 +22,10 @@ handleSubmit,
 formState:{errors},
 
 }  = useForm(yupResolver(schema))
-
+console.log(id)
 const onSubmit = async formdata  => {
   try {
-    const response = await fetch("https://gym-academy-back-end-six.vercel.app/alterar-receita",{
+    const response = await fetch(`https://gym-academy-back-end-six.vercel.app/alterar-receita/${id}`,{
       method:"PUT",
       headers:{
         "content-type": "application/json",
@@ -34,7 +34,7 @@ const onSubmit = async formdata  => {
     })
     if(response.ok){
       const info = await response.json()
-      window.location 
+      window.location .href = "/"
       console.log(info)
     }
   }

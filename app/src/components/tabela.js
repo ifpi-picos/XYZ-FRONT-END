@@ -138,7 +138,7 @@ const TrainingTable = () => {
       <div id="acoes">
       <div style={{ textAlign: 'center' }}>
       <button
-        style={{
+        style={{ 
           padding: '10px',
           backgroundColor: '#2196F3',
           color: 'white',

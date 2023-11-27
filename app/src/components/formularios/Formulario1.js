@@ -35,8 +35,7 @@ const onSubmit = async formdata  => {
     })
     if(response.ok){
       const info = await response.json()
-      window.location 
-      console.log(info)
+      window.location.href = "/"
     }
   }
   catch(erro){

@@ -1,6 +1,5 @@
 // components/Header.js
 "use client";
-import Link from "next/link";
 import "@/components/css/Header.css";
 /* globals.css */
 
@@ -24,12 +23,12 @@ const Header = () => {
         <div className="btn">
           <i className="fas fa-times close-btn" onClick={toggleMenu}></i>
         </div>
-        <Link href="/" className="active">
+        <a href="/" className="active">
           INÍCIO
-        </Link>
-        <Link href="#sobre">SOBRE</Link>
-        <Link href="#informacoes">INFORMAÇÕES</Link>
-        <Link href="#contato">CONTATOS</Link>
+        </a>
+        <a href="#sobre">SOBRE</a>
+        <a href="#informacoes">INFORMAÇÕES</a>
+        <a href="#contato">CONTATOS</a>
       </nav>
       <div className="btn">
         <i className="fas fa-bars menu-btn" onClick={toggleMenu}></i>

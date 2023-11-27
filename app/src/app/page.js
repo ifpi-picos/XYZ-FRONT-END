@@ -71,7 +71,7 @@ export default function Home() {
 
             <div class="row">
               <div class="col-6">
-                <Link href="/receitas" class="cardlink">
+                <a href="/receitas" class="cardlink">
                   <div class="card">
                     <div className="icon">
                       <FAIcon
@@ -91,10 +91,10 @@ export default function Home() {
                       Dicas de alimentação para o ganho de massa muscular
                     </p>
                   </div>
-                </Link>
+                </a>
               </div>
               <div class="col-6">
-                <Link href="/biotipo" class="cardlink">
+                <a href="/biotipo" class="cardlink">
                   <div class="card">
                     <div className="icon">
                       <FontAwesomeIcon
@@ -112,10 +112,10 @@ export default function Home() {
                       treino
                     </p>
                   </div>
-                </Link>
+                </a>
               </div>
               <div class="col-6">
-                <Link href="/treino" class="cardlink">
+                <a href="/treino" class="cardlink">
                   {" "}
                   <div class="card">
                     <div className="icon">
@@ -133,10 +133,10 @@ export default function Home() {
                       Instruções de treino e Informações sobre os exercicios
                     </p>
                   </div>
-                </Link>
+                </a>
               </div>
               <div class="col-6">
-                <Link href="/tabela" class="cardlink">
+                <a href="/tabela" class="cardlink">
                   <div class="card">
                     <span className="oi">
                       <FAIcon
@@ -153,7 +153,7 @@ export default function Home() {
                       Tabela de treino para iniciantes 
                     </p>
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

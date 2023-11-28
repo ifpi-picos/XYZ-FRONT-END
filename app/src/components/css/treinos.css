@@ -59,7 +59,7 @@ body {
 .row {
     display: flex; 
     flex-flow: row wrap; 
-    width: 100%;
+    width: 65%;
 }
 
 .row > * {
@@ -88,115 +88,7 @@ body {
 
 
 /* ----------------- header -------------------- */
-header {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10px;
-    background-color: var(--cinza);
-    color: #fff;
-    height: 70px;
-   z-index: 1000;
-  }
-  
-  header .logo {
-    font-size: 30px;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: 2px;
-    color: #fff;
-  }
-  
-  header .navbar {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header .navbar a {
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-decoration: none;
-    margin:10px;
-    padding: 15px;
-    border-radius: 05px;
-    color: #fff;
-    letter-spacing: 1px;
-  }
-  
-  header .navbar a:hover,
-  .active {
-    background: #2c3e50;
-   
-  }
-  
-  header .btn {
-    font-size: 25px;
-    cursor: pointer;
-    display: none;
-  }
-  
-  
-  
-  @media (max-width: 991px) {
-    
-    header {
-      padding: 10px 10px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    header .btn {
-      display: block;
-    }
-  
-    header .navbar {
-      position: fixed;
-      flex-direction: column;
-      min-width: 300px;
-     background-color: var(--cinza);
-      top: 0;
-      right: -100%;
-      
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding-top: 10rem;
-    }
-  
-    header .navbar.active2 {
-      right: 0;
-      
-    }
-  
-    header .navbar .close-btn {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 25px;
-    }
-  
-    header .navbar a {
-      display: block;
-      font-size: 20px;
-      margin: 15px;
-      padding: 0.5rem 15px;
-    }
-  
-    header .navbar a:hover {
-      background: #21293a;
-      color: #fff;
-    }
-  
-    header .logo {
-      font-size: 25px;
-      font-weight: 500;
-    }
-  
-  }
-  
+
 /*  ----------------- section inicio ------------------- */
 
 .inicio {
@@ -211,6 +103,7 @@ header {
 .inicio .container h2 {
     color: var(--branco);
     font-size: 28px;
+     margin-right: 20px;
 }
 
 .inicio .container h1 {
@@ -228,12 +121,14 @@ header {
     font-size: 22px;
     text-decoration: none;
     border-radius: 12px;
+    
 }
 
 .inicio .container a:hover {
     background-color: var(--laranja);
     color: var(--branco);
     transition: 0.3s;
+    
 }
 
 /* ------------- section sobre --------------- */
@@ -246,11 +141,11 @@ header {
     font-size: 22px;
 }
 
-.sobre-conteudo p {
+.sobre-conteudo, p {
     margin-bottom: 20px;
 }
 
-.sobre-conteudo span {
+.sobre-conteudo, span {
     font-size: 32px;
     font-weight: 900;
 }
@@ -263,7 +158,7 @@ header {
     text-align: center;
 }
 
-#exercicios-container {
+.container2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,16 +166,17 @@ header {
     background-color: lightgray;
     padding: 20px;
     border-radius: 20px;
-    margin-top: 50px; /* Apenas para criar espaço para a demonstração */
+    margin-top: 50px; 
+    /* Apenas para criar espaço para a demonstração */
   }
   
-  #links-container {
+  #links- .container2 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
   }
   
-  #links-container a {
+  #links-container2 a {
     margin: 0 10px;
   }
   
@@ -289,7 +185,7 @@ header {
     margin-top: 20px;
   }
   
-  .grupo-exercicio h3 {
+  .grupo-exercicio, h3 {
     margin: 0;
     font-size: 18px;
   }
@@ -307,13 +203,14 @@ header {
 
 /* ------------ section informações --------------------- */
 
-#informacoes {
+.container2 {
     background-color: var(--laranja);
     color: var(--cinza);
     position: relative;
     margin-top: -20px;
     /* z-index: 100; */
     padding: 80px 0;
+    
 }
 
 .h1-principal-branco {
@@ -325,7 +222,7 @@ header {
 
 
 /* ------------ carde de treino--------------------- */
-#informacoes .card {
+#informacoes, .card {
     background-color: var(--branco);
     padding: 50px 80px;
     text-align: center;
@@ -347,13 +244,13 @@ header {
 
 
 
-#informacoes .card h1 {
+#informacoes, .card h1 {
     margin: 10px ;
     font-size: 40px;
     border-radius: 2px var(--cinza);
 }
 
-#informacoes .card {
+#informacoes, .card {
     font-size: 20px;
     margin-bottom: 60px;
 }
@@ -447,13 +344,4 @@ footer{
         flex-direction: column;
     }
     
-}
-/* tirar a marca do link dos cardios*/
-.cardlink{
-    text-decoration: none;
-    color: black;
-}
-contatos, p{
-    align-items: center;
-    text-align: center;
 }

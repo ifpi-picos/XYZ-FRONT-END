@@ -13,7 +13,7 @@ import "@/components/menu2";
 export default function Biotipo() {
   return (
     <>
-      <Header />
+      <Header/>
 
       <section
         className="inicio container-fluid"

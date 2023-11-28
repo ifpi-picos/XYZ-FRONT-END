@@ -223,4 +223,70 @@ h2 {
     }
    
   }
+  @media (max-width: 977px) {
+    .container {
+      width: 100%;
+    }
+  
+    #sobre .row {
+      flex-direction: column-reverse;
+    }
+    .inicio {
+      background-size: 100% 100%;
+    }
+  }
+  
+  /* ------------ celular ------------ */
+  @media (max-width: 700px) {
+    /* menu */
+    .menuprincipal h1 {
+      font-size: 20px;
+    }
+  
+    .menuprincipal .container {
+      flex-direction: column;
+      gap: 15px;
+      padding: 0 30px;
+    }
+  
+    .menuprincipal ul li a {
+      font-size: 18px;
+    }
+  
+    /* header inicio */
+  
+    .img-treino {
+      text-align: center;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .inicio {
+      background-size: 100% 100%;
+    }
+  
+    .inicio .container h2 {
+      font-size: 22px;
+    }
+  
+    .inicio .container h1 {
+      font-size: 38px;
+    }
+  
+    .inicio .container a {
+      font-size: 22px;
+    }
+  
+    /* informacoes */
+  
+    #informacoes .row {
+      flex-direction: column;
+    }
+  }
+  /* tirar a marca do link dos cardios*/
+  .cardlink {
+    text-decoration: none;
+    color: black;
+  }
+
   

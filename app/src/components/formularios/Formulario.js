@@ -2,6 +2,7 @@
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
 import logo from "@/components/img/login.jpg"
+
 const Formulario = () => {
   const {
     register,
@@ -10,22 +11,42 @@ const Formulario = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-  
     console.log(data);
   };
 
   return (
     <div className="form-container">
-          <Image
-                 
-                 src={logo}
-                 width={100}
-                 height={100}
-                 alt="sobre"
-               className="imagemr" />
+      <Image
+        src={logo}
+        width={100}
+        height={100}
+        alt="sobre"
+        className="imagemr"
+      />
       <h2>Formulário de Treino</h2>
-    
+
       <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-group">
+          <label htmlFor="tipoTreino">Tipo de Treino</label>
+          <select
+            {...register('tipoTreino', {
+              required: 'Este campo é obrigatório',
+            })}
+            id="tipoTreino"
+          >
+            <option value="peito">Peito</option>
+            <option value="costa">Costas</option>
+            <option value="biceps">Bíceps</option>
+            <option value="triceps">Tríceps</option>
+            <option value="panturrilhas">Panturrilhas</option>
+            <option value="ombros">Ombros</option>
+            <option value="pernas">Pernas</option>
+            <option value="gluteos">Glúteos</option>
+          </select>
+          {errors.tipoTreino && (
+            <p className="error-message">{errors.tipoTreino.message}</p>
+          )}
+        </div>
         <div className="form-group">
           <label htmlFor="nomeTreino">Nome do Treino</label>
           <input
@@ -39,6 +60,8 @@ const Formulario = () => {
             <p className="error-message">{errors.nomeTreino.message}</p>
           )}
         </div>
+
+  
 
         <div className="form-group">
           <label htmlFor="imagemTreino">Escolha uma Imagem</label>
@@ -54,7 +77,6 @@ const Formulario = () => {
             <p className="error-message">{errors.imagemTreino.message}</p>
           )}
         </div>
-        
 
         <div className="form-group">
           <label htmlFor="descricaoTreino">Descrição do Treino</label>
@@ -69,11 +91,26 @@ const Formulario = () => {
           )}
         </div>
 
-       
         <button type="submit">Enviar</button>
       </form>
 
       <style jsx>{`
+      
+      .backButton {
+        display: inline-block;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .backButton:hover {
+        background-color: #0056b3;
+      }
+      
+      
         .form-container {
           max-width: 400px;
           margin: auto;
@@ -85,7 +122,6 @@ const Formulario = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-top:100px;
         }
 
         h2 {
@@ -126,11 +162,40 @@ const Formulario = () => {
           border-radius: 5px;
           cursor: pointer;
         }
+        label {
+          display: block;
+          margin-bottom: 5px;
+          color: orange;
+        }
+      
+        input,
+        textarea,
+        button,
+        select {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+        }
+      
+        
+        #tipoTreino {
+          background-color: #f0f0f0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 8px;
+          color: #333;
+        }
+      
+        #tipoTreino option {
+          background-color: white;
+          color: #333;
+        }
+      
+        
       `}</style>
     </div>
   );
 };
 
 export default Formulario;
-
-

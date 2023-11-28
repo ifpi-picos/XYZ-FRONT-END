@@ -8,8 +8,6 @@ import Image from "next/image";
 import "@/components/menu2";
 import crepioca from "@/components/img/crepioca.jpeg"
 
-
- 
 async function pegarReceitas() {
   const res = await fetch("https://gym-academy-back-end-six.vercel.app/receitas", {
     

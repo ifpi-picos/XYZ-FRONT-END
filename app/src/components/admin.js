@@ -49,9 +49,9 @@ export default function Admin({ Receitas }) {
                    {receita.ingredientes}
                   </ul>
                   <h2>Modo de Preparo:</h2>
-                  <p>{receita.modoPreparo}</p>
+                  <p>{receita.modoDePreparo}</p>
                   <div>
-                    <Link href={`alterar-receita/${receita._id}`}>Editar</Link>
+               <button>   <Link style={{color:"white", textDecoration:"none"}} href={`alterar-receita/${receita._id}`}>Editar</Link> </button>  
                     <button onClick={() => handleDeletar(receita._id)}>Deletar</button>
                   </div>
                 </div>

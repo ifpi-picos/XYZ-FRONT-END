@@ -364,6 +364,10 @@ footer {
   #informacoes .row {
     flex-direction: column;
   }
+  .card{
+    width: 100%;
+    font-size: 10px;
+  }
 }
 /* tirar a marca do link dos cardios*/
 .cardlink {

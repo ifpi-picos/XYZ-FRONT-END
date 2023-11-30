@@ -70,8 +70,7 @@ export default function treino() {
               <div class="col-6">
                 <Link href="/peito" class="cardlink">
                   <div class="card">
-                    <div className="icon">             
-                    </div>
+                    
                     <h1 style={{ textAlign: "center",fontSize: "40px", }}>PEITO</h1>
                     <p style={{ textAlign: "center" }}>
                     Desenvolva um peito forte para benefícios físicos e visuais
@@ -142,7 +141,7 @@ export default function treino() {
                     <span className="oi">
                    
                     </span>
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>PANTURRILHAS</h1>
+                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>PANTURRILHA</h1>
                     <p style={{ textAlign: "center" }}>
                     Fortaleça as panturrilhas e essenciais para o suporte do corpo                    </p>
                   </div>

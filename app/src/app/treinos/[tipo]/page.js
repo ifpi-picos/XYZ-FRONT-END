@@ -47,8 +47,8 @@ const TreinoPage = async ({ params }) => {
                         <Image
                           className="alimenta"
                           src={sobree}
-                          width={400}
-                          height={300}
+                          width={100}
+                          height={200}
                           alt="sobre"
                         />
                         <p>{treinoInfo.descricao}</p>

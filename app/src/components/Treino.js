@@ -68,7 +68,7 @@ export default function treino() {
 
             <div class="row">
               <div class="col-6">
-                <Link href="/peito" class="cardlink">
+                <Link href="/treinos/peito" class="cardlink">
                   <div class="card">
                     
                     <h1 style={{ textAlign: "center",fontSize: "40px", }}>PEITO</h1>

@@ -7,6 +7,7 @@ import logo from "@/components/img/login.jpg"
 import * as yup from "yup"
 import {yupResolver} from "@hookform/resolvers/yup"
 import { Controller,useForm } from "react-hook-form";
+import "@/components/formularios/form.css"
 
 const schema = yup.object().shape({
 nome: yup.string().required("nome obrigatório"),
@@ -131,60 +132,6 @@ const onSubmit = async formdata  => {
         </div>
         <button type="submit">Enviar</button>
       </form>
-
-      <style jsx>{`
-        .form-container {
-          max-width: 400px;
-          margin: auto;
-          padding: 20px;
-          border: 2px solid orange;
-          border-radius: 10px;
-          background-color: white;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        h2 {
-          color: orange;
-          text-align: center;
-        }
-
-        .form-group {
-          width: 100%;
-          margin-bottom: 20px;
-        }
-
-        label {
-          display: block;
-          margin-bottom: 5px;
-          color: orange;
-        }
-
-        input,
-        textarea,
-        button {
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 10px;
-          box-sizing: border-box;
-        }
-
-        .error-message {
-          color: red;
-          margin-top: 5px;
-        }
-
-        button {
-          background-color: orange;
-          color: white;
-          padding: 10px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-      `}</style>
     </div>
   );
 };

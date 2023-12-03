@@ -299,6 +299,9 @@ footer {
   #sobre .row {
     flex-direction: column-reverse;
   }
+  .row{
+    width: 10%;
+  }
 }
 
 /* ------------ celular ------------ */
@@ -358,6 +361,9 @@ footer {
   .inicio .container a {
     font-size: 22px;
   }
+  .row{
+    width: 5%;
+  }
 
   /* informacoes */
 
@@ -365,7 +371,9 @@ footer {
     flex-direction: column;
   }
   .card{
-    width: 100%;
+    align-items: center;
+    text-align: center;
+    width: 70%;
     font-size: 10px;
   }
 }

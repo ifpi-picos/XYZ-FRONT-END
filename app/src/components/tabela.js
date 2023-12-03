@@ -123,17 +123,18 @@ const TrainingTable = () => {
         <tbody>
           {exercises.map((exercise, index) => (
             <tr key={index}>
-              <td>{exercise.name}</td>
+              <td >{exercise.name}</td>
               <td>{exercise.sets}</td>
               <td>{exercise.repetitions}</td>
               <td>{exercise.load}</td>
-              <td>
-                <button onClick={() => removeExercise(index)}>Remover exercício</button>
+              <td >
+               <a className="abot"  onClick={() => removeExercise(index)}>X</a>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+
 
       <div id="acoes">
       <div style={{ textAlign: 'center' }}>
@@ -209,6 +210,7 @@ const TrainingTable = () => {
       </button>
     </div>
       </Modal>
+    
     
     <Footer />
     </div>

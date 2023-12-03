@@ -1,20 +1,23 @@
-import "@/components/css/treino.css";
-import React from "react";
-import Header from "./Header";
-import Footer from "./footer";
-import "@/components/menu2";
+import "@/components/css/home.css";
+import Header from "@/components/Header";
+
+
+import Footer from "@/components/footer";
 import Image from "next/image";
 import img from "@/components/img/headertreinopoo.jpg";
 import sobre from "@/components/img/treino.png";
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import "@/components/menu2";
 import Link from "next/link";
 
-export default function treino() {
+export default function Home() {
   return (
     <>
       <Header />
-
       <section
-        className="inicio container-fluid"
+        className="inicio"
         id="inicio"
         style={{
           backgroundImage: `url(${img.src})`,
@@ -22,28 +25,28 @@ export default function treino() {
       >
         <div className="container">
           <h2>
-            Ajudamos você a<br />
-            tirar dúvidas sobre
+            Ajudamos você a <br /> tirar dúvidas sobre
           </h2>
-          <h1>Treinos</h1>
+
+          <h1>MUSCULAÇÃO</h1>
+
           <a href="#informacoes">COMEÇAR AGORA</a>
         </div>
       </section>
 
       <main>
-        <section className="container" id="sobre">
-          <h1 className="h1-principal-laranja">SOBRE O TREINO</h1>
-          <div className="row">
-            <div className="col-6">
+        <section class="container" id="sobre">
+          <h1 class="h1-principal-laranja">SOBRE A GYM ACADEMY</h1>
+          <div class="row">
+            <div class="col-6">
               <Image
-                className="treinosobre"
+                className="img-treino"
                 src={sobre}
                 width={300}
-                height={350}
-                alt="sobre"
+                height={300}
+                alt="imagem de um homem segurando pesos"
               />
             </div>
-
             <div className="col-6 sobre-conteudo">
               <p>
                 <span className="cinza-claro">O </span>
@@ -59,128 +62,187 @@ export default function treino() {
             </div>
           </div>
         </section>
-      
 
-
-      <section class="container-fluid" id="informacoes">
+        <section class="container-fluid" id="informacoes">
           <div class="container">
-            <h1 class="h1-principal-branco">QUAL TREINO VOCE DESEJA ACESSAR?</h1>
+            <h1 class="h1-principal-branco">QUAIS TREINOS DESEJA ACESSAR?</h1>
 
             <div class="row">
-              <div class="col-6">
-                <Link href="/treinos/peito" class="cardlink">
-                  <div class="card">
-                    
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>PEITO</h1>
-                    <p style={{ textAlign: "center" }}>
+           
+            <div className="col-6">
+      <a href="/peito" className="cardlink">
+        <div className="card">
+    
+      
+          <span className="oi">
+            <FontAwesomeIcon
+              icon={faDumbbell}
+              style={{
+                height: "70px",
+                width: "70px",
+                marginLeft: "1px",
+              }}
+              
+            />
+            <h1 style={{ textAlign: "center",fontSize: "30px", }}>PEITO</h1>
+             <p style={{ textAlign: "center" }}>
                     Desenvolva um peito forte para benefícios físicos e visuais
                     </p>
-
-              
-                  </div>
-                </Link>
-              </div>
-              <div class="col-6">
-                <Link href="/costa" class="cardlink">
-                  <div class="card">
-                    <div className="icon">
-                   
-                      
-                    </div>
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>COSTA</h1>
+          </span>
+        </div>
+      </a>
+    </div>
+    <div className="col-6">
+      <a href="/tabela" className="cardlink">
+        <div className="card">
+          <span className="oi">
+            <FontAwesomeIcon
+              icon={faDumbbell}
+              style={{
+                height: "70px",
+                width: "70px",
+                marginLeft: "1px",
+              }}
+            />
+              <h1 style={{ textAlign: "center",fontSize: "30px", }}>COSTA</h1>
                     <p style={{ textAlign: "center" }}>
                     Fortaleça suas costas para benefícios funcionais e estéticos
                     </p>
-                  </div>
-                </Link>
-              </div>
-              <div class="col-6">
-                <Link href="/biceps" class="cardlink">
-                  
-                  <div class="card">
-                    <div className="icon">
-              
-                    </div>
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>BÍCEPS</h1>
+          </span>
+        </div>
+      </a>
+    </div>
+            
+    <div className="col-6">
+      <a href="/tabela" className="cardlink">
+        <div className="card">
+          <span className="oi">
+            <FontAwesomeIcon
+              icon={faDumbbell}
+              style={{
+                height: "70px",
+                width: "70px",
+                marginLeft: "1px",
+              }}
+            />
+            <h1 style={{ textAlign: "center",fontSize: "30px", }}>BÍCEPS</h1>
                     <p style={{ textAlign: "center" }}>
                     Fortaleça seus bíceps para ganhos funcionais e visuais
                     </p>
-                  </div>
-                </Link>
-              </div>
-              <div class="col-6">
-                <Link href="/triceps" class="cardlink">
-                  <div class="card">
-                    <span className="oi">
-                   
-                    </span>
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>TRÍCEPS</h1>
+          </span>
+        </div>
+      </a>
+    </div>
+    <div className="col-6">
+      <a href="/tabela" className="cardlink">
+        <div className="card">
+          <span className="oi">
+            <FontAwesomeIcon
+              icon={faDumbbell}
+              style={{
+                height: "70px",
+                width: "70px",
+                marginLeft: "1px",
+              }}
+            />
+              <h1 style={{ textAlign: "center",fontSize: "30px", }}>TRÍCEPS</h1>
                     <p style={{ textAlign: "center" }}>
                     Fortaleça os tríceps para ganhos funcionais e visuais                    </p>
-                  </div>
-                </Link>
-              </div>
+          </span>
+        </div>
+      </a>
+    </div>
 
-              <div class="col-6">
-                <Link href="/ombros" class="cardlink">
-                  <div class="card">
-                    <span className="oi">
-                   
-                    </span>
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>OMBROS</h1>
+    <div className="col-6">
+      <a href="/tabela" className="cardlink">
+        <div className="card">
+          <span className="oi">
+            <FontAwesomeIcon
+              icon={faDumbbell}
+              style={{
+                height: "70px",
+                width: "70px",
+                marginLeft: "1px",
+              }}
+            />
+             <h1 style={{ textAlign: "center",fontSize: "30px", }}>OMBROS</h1>
                     <p style={{ textAlign: "center" }}>
                     Fortaleça os ombros para benefícios visuais e funcionais
                     </p>
-                  </div>
-                </Link>
-              </div>
+          </span>
+        </div>
+      </a>
+    </div>
 
-              <div class="col-6">
-                <Link href="/panturrilhas" class="cardlink">
-                  <div class="card">
-                    <span className="oi">
-                   
-                    </span>
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>PANTURRILHA</h1>
+    <div className="col-6">
+      <a href="/tabela" className="cardlink">
+        <div className="card">
+          <span className="oi">
+            <FontAwesomeIcon
+              icon={faDumbbell}
+              style={{
+                height: "70px",
+                width: "70px",
+                marginLeft: "1px",
+              }}
+            />
+             <h1 style={{ textAlign: "center",fontSize: "30px", }}>PANTURRILHA</h1>
                     <p style={{ textAlign: "center" }}>
                     Fortaleça as panturrilhas e essenciais para o suporte do corpo                    </p>
-                  </div>
-                </Link>
-              </div>
-              <div class="col-6">
-                <Link href="/pernas" class="cardlink">
-                  <div class="card">
-                    <span className="oi">
-                   
-                    </span>
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>PERNAS</h1>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div className="col-6">
+      <a href="/tabela" className="cardlink">
+        <div className="card">
+          <span className="oi">
+            <FontAwesomeIcon
+              icon={faDumbbell}
+              style={{
+                height: "70px",
+                width: "70px",
+                marginLeft: "1px",
+              }}
+            />
+             <h1 style={{ textAlign: "center",fontSize: "30px", }}>PERNAS</h1>
                     <p style={{ textAlign: "center" }}>
                     Fortaleça as pernas para benefícios funcionais e uma base sólida
                     </p>
-                  </div>
-                </Link>
-              </div>
-
-              <div class="col-6">
-                <Link href="/gluteos" class="cardlink">
-                  <div class="card">
-                    <span className="oi">
-                   
-                    </span>
-                    <h1 style={{ textAlign: "center",fontSize: "40px", }}>GLÚTEOS</h1>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+    <div className="col-6">
+      <a href="/tabela" className="cardlink">
+        <div className="card">
+          <span className="oi">
+            <FontAwesomeIcon
+              icon={faDumbbell}
+              style={{
+                height: "70px",
+                width: "70px",
+                marginLeft: "1px",
+              }}
+            />
+             <h1 style={{ textAlign: "center",fontSize: "30px", }}>GLÚTEOS</h1>
                     <p style={{ textAlign: "center" }}>
                     Fortaleça os glúteos promove estabilidade e mobilidade
                     </p>
-                  </div>
-                </Link>
-              </div>
-              
+          </span>
+        </div>
+      </a>
+    </div>
+
             </div>
           </div>
         </section>
       </main>
-
-      <Footer />
+      <>
+        <Footer />
+      </>
     </>
   );
 }

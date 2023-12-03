@@ -84,7 +84,7 @@ const SlideNavbar = () => {
 
       if (response.ok) {
         const responseData = await response.json();
-        window.location.href = "/";
+        window.location.href = "/principal";
       }
 
       if (response.status === 400) {

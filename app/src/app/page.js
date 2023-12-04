@@ -7,7 +7,7 @@ import '@/components/css/login.css';
 const Cadastra = () => {
   return (
     <div>
-        <h1>GYM ACADEMY</h1>
+        <h1 style={{textAlign:"center"}}>GYM ACADEMY</h1>
         <div className="main">
      
         <input type="checkbox" id="chk" aria-hidden="true" />

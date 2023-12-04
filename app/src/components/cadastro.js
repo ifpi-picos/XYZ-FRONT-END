@@ -96,9 +96,6 @@ const SlideNavbar = () => {
   };
   return (
     <div>
-  
-     
-      
         <input type="checkbox" id="chk" aria-hidden="true" />
 
           

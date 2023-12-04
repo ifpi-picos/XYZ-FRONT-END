@@ -16,10 +16,10 @@
               <h1>404</h1>
               <h2>page does not exist</h2>
             </div>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </div>
         </div>
-      </>
+      </> 
     );
   };
   

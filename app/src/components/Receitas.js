@@ -1,6 +1,7 @@
 import React from "react";
 import "@/components/css/Receitas.css";
 import Header from "./Header";
+import "@/components/menu2";
 import Footer from "./footer";
 import img from "@/components/img/headeralimenta.jpeg";
 import sobree from "@/components/img/alimentaçao.png";

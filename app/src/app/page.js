@@ -6,7 +6,7 @@ import '@/components/css/login.css';
 
 const Cadastra = () => {
   return (
-    <div>
+    <div style={{textAlign:"center"}}>
         <h1 style={{textAlign:"center"}}>GYM ACADEMY</h1>
         <div className="main">
      

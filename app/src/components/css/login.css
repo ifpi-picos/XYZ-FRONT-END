@@ -100,11 +100,13 @@ button:hover{
 }
 @media (max-width: 977px) {
   .main {
-    width: 700px; /* Ajuste a largura para telas maiores */
-    height: 500px; /* Ajuste a altura para telas maiores */
+    width: 700px; 
+    height: 500px; 
   }
  
-  
+  h1{
+	font-size: 25px;
+  }
 
 }
 

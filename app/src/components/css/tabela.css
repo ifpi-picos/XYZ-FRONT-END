@@ -305,7 +305,16 @@ th {
 /* ----------------------- responsividade --------------- */
 /* ------------ tablet ------------ */
 @media (max-width: 977px) {
+  #tabela-treino, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+  }
 
+  th, td {
+    padding: 1px;
+    text-align: left;
+    font-size: 5px;
+  }
   .inicio {
     background-size: 100% 100%;
   }
@@ -322,7 +331,24 @@ th {
 /* ------------ celular ------------ */
 @media (max-width: 700px) {
   
-  
+  #tabela-treino, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    width: -2%;
+    font-size: 18px; 
+  }
+
+
+  .abot{
+ margin-bottom: 50px;
+    background-color: #4CAF50;
+    color: #f2f2f2;
+    border: 1px solid #4CAF50;
+
+  }
+ 
+
+
   .inicio {
     background-size: 100% 100%;
   }

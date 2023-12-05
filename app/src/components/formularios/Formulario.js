@@ -1,8 +1,8 @@
 "use client"
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
-import logo from "@/components/img/login.jpg"
-import "@/components/formularios/form.css"
+import logo from "@/components/img/login.jpg";
+import "@/components/formularios/form.css";
 
 const Formulario = () => {
   const {
@@ -61,8 +61,6 @@ const Formulario = () => {
             <p className="error-message">{errors.nomeTreino.message}</p>
           )}
         </div>
-
-  
 
         <div className="form-group">
           <label htmlFor="imagemTreino">Escolha uma Imagem</label>

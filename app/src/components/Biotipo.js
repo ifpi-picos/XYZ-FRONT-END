@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import "@/components/menu2";
 import Footer from "./footer";
 import "@/components/css/biotipo.css";
 import img from "@/components/img/biotipo.jpg";
@@ -8,7 +9,6 @@ import mesomorfo from "@/components/img/mesomorfo-malhando.webp";
 import ectomorfo from "@/components/img/ectomorfo-malhando.webp";
 
 import Image from "next/image";
-import "@/components/menu2";
 
 export default function Biotipo() {
   return (

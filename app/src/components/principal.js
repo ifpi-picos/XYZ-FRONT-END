@@ -1,4 +1,5 @@
 import "@/components/css/home.css";
+import "@/components/menu2";
 import Header from "@/components/Header";
 import Image from "next/image";
 import homem from "@/components/img/homem.png";
@@ -10,8 +11,8 @@ import img from "public/header.jpg";
 import { faChildReaching } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonRunning } from "@fortawesome/free-solid-svg-icons";
-import "@/components/menu2";
-import Link from "next/link";
+
+
 
 export default function Home() {
   return (

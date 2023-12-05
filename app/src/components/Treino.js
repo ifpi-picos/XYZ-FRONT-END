@@ -1,7 +1,6 @@
 import "@/components/css/home.css";
 import Header from "@/components/Header";
-
-
+import "@/components/menu2";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import img from "@/components/img/headertreinopoo.jpg";
@@ -36,7 +35,7 @@ export default function Home() {
 
       <main>
         <section class="container" id="sobre">
-          <h1 class="h1-principal-laranja">SOBRE A GYM ACADEMY</h1>
+          <h1 class="h1-principal-laranja">SOBRE O TREINO</h1>
           <div class="row">
             <div class="col-6">
               <Image
@@ -70,7 +69,7 @@ export default function Home() {
             <div class="row">
            
             <div className="col-6">
-      <a href="/peito" className="cardlink">
+      <a href="treinos/peito" className="cardlink">
         <div className="card">
     
       
@@ -93,7 +92,7 @@ export default function Home() {
       </a>
     </div>
     <div className="col-6">
-      <a href="/tabela" className="cardlink">
+      <a href="/costa" className="cardlink">
         <div className="card">
           <span className="oi">
             <FontAwesomeIcon
@@ -114,7 +113,7 @@ export default function Home() {
     </div>
             
     <div className="col-6">
-      <a href="/tabela" className="cardlink">
+      <a href="/" className="cardlink">
         <div className="card">
           <span className="oi">
             <FontAwesomeIcon
@@ -134,7 +133,7 @@ export default function Home() {
       </a>
     </div>
     <div className="col-6">
-      <a href="/tabela" className="cardlink">
+      <a href="/" className="cardlink">
         <div className="card">
           <span className="oi">
             <FontAwesomeIcon
@@ -154,7 +153,7 @@ export default function Home() {
     </div>
 
     <div className="col-6">
-      <a href="/tabela" className="cardlink">
+      <a href="/" className="cardlink">
         <div className="card">
           <span className="oi">
             <FontAwesomeIcon
@@ -175,7 +174,7 @@ export default function Home() {
     </div>
 
     <div className="col-6">
-      <a href="/tabela" className="cardlink">
+      <a href="/" className="cardlink">
         <div className="card">
           <span className="oi">
             <FontAwesomeIcon
@@ -195,7 +194,7 @@ export default function Home() {
     </div>
 
     <div className="col-6">
-      <a href="/tabela" className="cardlink">
+      <a href="/" className="cardlink">
         <div className="card">
           <span className="oi">
             <FontAwesomeIcon
@@ -216,7 +215,7 @@ export default function Home() {
     </div>
     
     <div className="col-6">
-      <a href="/tabela" className="cardlink">
+      <a href="/" className="cardlink">
         <div className="card">
           <span className="oi">
             <FontAwesomeIcon

@@ -42,7 +42,7 @@ const SlideNavbar = () => {
       if(response.status === 200){
         const responseData = await response.json()
         console.log(responseData.token)
-       // window.location.href = "/principal";
+        window.location.href = "/principal";
 
       }
       else{

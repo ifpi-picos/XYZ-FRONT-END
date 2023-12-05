@@ -3,6 +3,7 @@ import "@/components/css/treinos.css";
 import Header from "@/components/Header";
 import Image from 'next/image';
 import sobree from "@/components/img/flexoes.gif";
+import img from "@/components/img/peito.jpg";
 
 async function pegarTreinos(tipo) {
   const res = await fetch(`https://gym-academy-back-end-six.vercel.app//treinos-por-tipo/${tipo}`, {
@@ -20,13 +21,22 @@ const TreinoPage = async ({ params }) => {
     <>
       <div>
         <Header />
-        <section className="inicio container-fluid" id="inicio">
-          <div className="container">
-            <h2>Ajudamos você a <br /> tirar dúvidas sobre</h2>
-            <h1>MUSCULAÇÃO</h1>
-            <a href="#informacoes">COMEÇAR AGORA</a>
-          </div>
-        </section>
+        <section
+        className="inicio container-fluid"
+        id="inicio"
+        style={{
+          backgroundImage: `url(${img.src})`,
+        }}
+      >
+        <div className="container">
+          <h2>
+            Venha conhecer <br />
+            os diferentes tipos de
+          </h2>
+          <h1>TREINOS</h1>
+          <a href="#">COMEÇAR AGORA</a>
+        </div>
+      </section>
 
         <section>
             <div>
@@ -52,8 +62,8 @@ const TreinoPage = async ({ params }) => {
                           alt="sobre"
                         />
                         <p>{treinoInfo.descricao}</p>
-                        <h3>Como executar:</h3>
-                        <p>{treinoInfo.comoExecutar}</p>
+                        <h3 style={{textAlign:"left", marginLeft:"-3%", fontSize:"23px"}}>Como executar:</h3>
+                        <p style={{textAlign:"left", marginLeft:"-3%"}}>{treinoInfo.comoExecutar}</p>
                       </div>
                     </div>
                   </div>

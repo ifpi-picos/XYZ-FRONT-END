@@ -36,7 +36,7 @@ export default function costa() {
             
             
             <div className="col-6 sobre-conteudo">
-              <p><span className="cinza-claro">O treino de</span><span className="laranja"> Costa </span>                   
+              <p style={{textAlign:"center"}}><span className="cinza-claro">O treino de</span><span className="laranja"> Costa </span>                   
                        
              oferece para além dos aspectos estéticos, um bom alicerce para 
                 o desenvolvimento de outras musculaturas do corpo humano, assim como uma estabilidade 

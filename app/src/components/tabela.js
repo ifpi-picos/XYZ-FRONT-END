@@ -51,6 +51,11 @@ const TrainingTable = () => {
     updatedExercises.splice(index, 1);
     setExercises(updatedExercises);
   };
+  const removeExercise1 = (index1) => {
+    const updatedExercises = [...exercises];
+    updatedExercises.splice(index1, 1);
+    setExercises(updatedExercises);
+  };
 
   return (
     <>
@@ -110,6 +115,7 @@ const TrainingTable = () => {
       <button onClick={openModal}>Adicionar exercício</button>
 
       </div>
+      <h1 style={{color:"white"}}>SEGUNDA-FEIRA</h1>
       <table id="tabela-treino" style={{ background:"white"}}>
         <thead>
           <tr>
@@ -135,6 +141,109 @@ const TrainingTable = () => {
         </tbody>
       </table>
 
+      <h1 style={{color:"white"}}>TERÇA-FEIRA</h1>
+      <table id="tabela-treino" style={{ background:"white"}}>
+        <thead>
+          <tr>
+            <th>Exercício</th>
+            <th>Séries</th>
+            <th>Repetições</th>
+            <th>Carga (kg)</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {exercises.map((exercise1, index1) => (
+            <tr key={index1}>
+              <td >{exercise1.name}</td>
+              <td>{exercise1.sets}</td>
+              <td>{exercise1.repetitions}</td>
+              <td>{exercise1.load}</td>
+              <td >
+               <a className="abot"  onClick={() => removeExercise1(index1)}>X</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>  
+      </table>
+
+      <h1 style={{color:"white"}}>QUARTA-FEIRA</h1>
+      <table id="tabela-treino" style={{ background:"white"}}>
+        <thead>
+          <tr>
+            <th>Exercício</th>
+            <th>Séries</th>
+            <th>Repetições</th>
+            <th>Carga (kg)</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {exercises.map((exercise, index) => (
+            <tr key={index}>
+              <td >{exercise.name}</td>
+              <td>{exercise.sets}</td>
+              <td>{exercise.repetitions}</td>
+              <td>{exercise.load}</td>
+              <td >
+               <a className="abot"  onClick={() => removeExercise(index)}>X</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>      
+      </table>
+
+      <h1 style={{color:"white"}}>QUINTA-FEIRA</h1>
+      <table id="tabela-treino" style={{ background:"white"}}>
+        <thead>
+          <tr>
+            <th>Exercício</th>
+            <th>Séries</th>
+            <th>Repetições</th>
+            <th>Carga (kg)</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {exercises.map((exercise, index) => (
+            <tr key={index}>
+              <td >{exercise.name}</td>
+              <td>{exercise.sets}</td>
+              <td>{exercise.repetitions}</td>
+              <td>{exercise.load}</td>
+              <td >
+               <a className="abot"  onClick={() => removeExercise(index)}>X</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>  
+      </table>
+
+      <h1 style={{color:"white"}}>SEXTA-FEIRA</h1>
+      <table id="tabela-treino" style={{ background:"white"}}>
+        <thead>
+          <tr>
+            <th>Exercício</th>
+            <th>Séries</th>
+            <th>Repetições</th>
+            <th>Carga (kg)</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {exercises.map((exercise, index) => (
+            <tr key={index}>
+              <td >{exercise.name}</td>
+              <td>{exercise.sets}</td>
+              <td>{exercise.repetitions}</td>
+              <td>{exercise.load}</td>
+              <td >
+               <a className="abot"  onClick={() => removeExercise(index)}>X</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>      
+      </table>
 
       <div id="acoes">
       <div style={{ textAlign: 'center' }}>

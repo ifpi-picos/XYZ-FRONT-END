@@ -14,12 +14,8 @@ const AdminNavbar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Link href="/admin/dashboard" passHref>
-            <Nav.Link as="a">Dashboard</Nav.Link>
-          </Link>
-          <Link href="/admin/users" passHref>
-            <Nav.Link as="a">Usuários</Nav.Link>
-          </Link>
+     
+         
           <Link href="/formularioreceita" passHref>
             <Nav.Link as="a">Cadastrar Receitas</Nav.Link>
           </Link>
@@ -30,7 +26,7 @@ const AdminNavbar = () => {
               <NavDropdown.Item as="a">Perfil</NavDropdown.Item>
             </Link>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#logout">Sair</NavDropdown.Item>
+            <NavDropdown.Item href="/principal">Sair</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>

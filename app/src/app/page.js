@@ -12,11 +12,11 @@ const Cadastra = () => {
      
         <input type="checkbox" id="chk" aria-hidden="true" />
         <div className="signup" style={formContainerStyle}>
-        <SlideNavbar title="Sign up" />
+        <AnotherComponent title="Sign up" />
           </div>
 
          <div className="login" style={formContainerStyle}>
-         <AnotherComponent title="Login" />
+         <SlideNavbar title="Login" />
    
     </div>
     </div>

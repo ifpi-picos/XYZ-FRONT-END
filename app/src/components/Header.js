@@ -1,9 +1,9 @@
 // components/Header.js
 "use client";
 import "@/components/css/Header.css";
-/* globals.css */
 
-/* Outros estilos globais podem vir aqui */
+ 
+
 
 import { useState } from "react";
 
@@ -15,6 +15,8 @@ const Header = () => {
   };
 
   return (
+    <>
+    <a  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></a>
     <header>
       <h1 className="titulo">
         <span className="laranja">GYM</span> ACADEMY
@@ -34,6 +36,7 @@ const Header = () => {
         <i className="fas fa-bars menu-btn" onClick={toggleMenu}></i>
       </div>
     </header>
+    </>
   );
 };
 

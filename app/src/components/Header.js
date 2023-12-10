@@ -1,10 +1,6 @@
 // components/Header.js
 "use client";
 import "@/components/css/Header.css";
-
- 
-
-
 import { useState } from "react";
 
 const Header = () => {
@@ -16,6 +12,8 @@ const Header = () => {
 
   return (
     <>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <a  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></a>
     <header>
       <h1 className="titulo">

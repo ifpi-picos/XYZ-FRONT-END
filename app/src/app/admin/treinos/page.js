@@ -1,4 +1,4 @@
-import Admin from '@/components/admin';
+import Admin from '@/components/adminTreinos';
 import "@/components/admin/css/progressao.css"
 async function pegarReceitas() {
   const res = await fetch("https://gym-academy-back-end-six.vercel.app/receitas", {
